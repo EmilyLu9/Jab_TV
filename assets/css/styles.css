@@ -1,0 +1,481 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+/* CSS Variables */
+:root {
+  --normal-font: 400;
+  --bold-font: 600;
+  --bolder-font: 900;
+  --primary-color: #0652dd;
+  --secondary-color: #ea2027;
+  --line-height: 1.7rem;
+  --transition: 0.4s ease-in;
+}
+
+/* Smooth scroll effect */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: var(--transition);
+}
+/* Fonts */
+body {
+  font-family: "Roboto", sans-serif;
+}
+/* Remove dots in lists */
+ul li {
+  list-style-type: none;
+}
+/* Remove underlines */
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+/* Hover menu items to red */
+a:hover {
+  color: var(--secondary-color);
+}
+
+/* Dark theme starts*/
+
+/* Dark theme ends */
+
+/* NAV BAR STARTS */
+/* Color logo */
+.jab {
+  color: var(--secondary-color);
+}
+.tv {
+  color: var(--primary-color);
+}
+.fist {
+  color: var(--secondary-color);
+}
+/* Style nav bar */
+nav {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  box-shadow: 1px 3px 2px #f1f1f1;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Make logo bigger */
+.logo {
+  font-size: 2rem;
+  font-weight: 500;
+}
+/* Make menu items side by side */
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Margin items in menu */
+.nav-item {
+  margin-left: 2rem;
+}
+/* Change links font weight */
+.nav-link {
+  font-weight: var(--bold-font);
+}
+
+/* DARK THEME STARTS*/
+.theme-switch {
+  margin-right: 70px;
+}
+.checkbox {
+  /* Hide checkbox coz just need it for switching functionality */
+  opacity: 0;
+  position: absolute;
+}
+.label {
+  width: 50px;
+  height: 29px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  border-radius: 30px;
+  padding: 6px;
+  position: relative;
+}
+.switcher {
+  background-color: #fff;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+.moon {
+  color: #ffa502;
+}
+.sun {
+  color: #ff4757;
+}
+/* Move the ball left to right by checked pseudo-class */
+.checkbox:checked + .label .switcher {
+  transform: translateX(20px);
+}
+/* Set color for dark theme */
+body.dark {
+  background-color: #1e2723;
+}
+body.dark .bar {
+  background-color: #fff;
+}
+body.dark p {
+  color: #fff;
+}
+body.dark h3 {
+  color: #fff;
+}
+body.dark nav {
+  background-color: #1e272e;
+  box-shadow: 2px 3px 2px #111010;
+}
+body.dark .name {
+  color: var(--primary-color);
+}
+body.dark .role {
+  color: var(--secondary-color);
+}
+body.dark footer {
+  color: #fff;
+  border-top: 1px solid #111010;
+  box-shadow: 0px -2px 3px #111010;
+}
+
+/* DARK THEME ENDS*/
+/* Hamburger */
+.hamburger {
+  display: block;
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  right: 3%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  display: none;
+}
+.hamburger .bar {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #0e2431;
+}
+
+/* NAV BAR ENDS */
+
+/* HERO SECTION STARTS */
+/* Align text and TV side by side*/
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.9rem;
+  max-width: 1100px;
+  margin: 2rem auto -6rem; /* Center everything */
+}
+/* Style intro text */
+.intro-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.intro-text p {
+  line-height: var(--line-height);
+}
+.hear {
+  color: var(--primary-color);
+}
+.connecting {
+  color: var(--secondary-color);
+}
+/* Style buttons */
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.8rem 0.6rem;
+  border: none;
+  font-size: 1.4rem;
+  color: #fff;
+  border-radius: 5px;
+}
+.red {
+  background-color: var(--secondary-color);
+  margin-right: 1.5rem;
+}
+.red:hover {
+  background-color: #b0292d;
+  color: #fff;
+}
+.blue {
+  background-color: var(--primary-color);
+}
+.blue:hover {
+  background-color: #05348b;
+  color: #fff;
+}
+/* Make iframe looks like a TV */
+iframe {
+  max-width: 30rem;
+  border-top: 40px groove var(--primary-color);
+  border-bottom: 40px groove var(--primary-color);
+  border-left: 28px solid var(--secondary-color);
+  border-right: 28px solid var(--secondary-color);
+}
+
+.stand-1 {
+  height: 90px;
+  width: 6px;
+  background-color: var(--primary-color);
+  transform: rotate(40deg);
+  position: relative;
+  top: -16px;
+  left: 200px;
+}
+.stand-2 {
+  height: 90px;
+  width: 6px;
+  background-color: var(--secondary-color);
+  transform: rotate(-40deg);
+  position: relative;
+  top: -105px;
+  left: 255px;
+}
+
+/* HERO SECTION ENDS */
+
+/* ABOUT SECTION STARS*/
+/* Add background image and align text by flex box */
+.about {
+  position: relative;
+  background: url(/assets/images/jab-transformed.png) no-repeat top center/cover;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+/* Style text */
+.about h3 {
+  font-size: 3rem;
+  margin-bottom: -20px;
+  text-shadow: 2px 2px 2px #333;
+}
+.about p {
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 2px #333;
+}
+/* ABOUT SECTION ENDS */
+
+/* IMAGE GALLERY STARS */
+/* Arrage images with CSS grid in order to use other properties inside the div */
+.stars-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+/* Remove white space and make image visible */
+.stars-gallery img,
+.stars-gallery a {
+  width: 100%;
+  height: 100%;
+}
+/* Target 1st image and define grid row and column for it */
+.stars-gallery a:first-child {
+  grid-row: 1/3;
+  grid-column: 1/3;
+}
+/* Tarfet 2nd image */
+.stars-gallery a:nth-child(2) {
+  grid-column: 3/5;
+}
+/* IMAGE GALLERY ENDS */
+
+/* STAKEHOLDERS STARTS */
+.persons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  gap: 1rem;
+}
+/* Tweak a bit */
+.people {
+  margin-top: 2rem;
+  padding: 1rem 0;
+}
+.stakeholders {
+  margin: 2rem auto;
+  max-width: 1100px;
+}
+.stakeholders img {
+  border-radius: 0.6rem;
+}
+.name {
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 0.8rem;
+}
+.role {
+  color: var(--secondary-color);
+  text-align: center;
+  font-size: 0.8rem;
+}
+/* STAKEHOLDERS ENDS*/
+
+/* Scroll to top button starts */
+.scroll-up {
+  position: fixed;
+  right: 0.5%;
+  bottom: 3%;
+}
+.up-arrow {
+  width: 3rem;
+  height: 3rem;
+}
+/* Scroll to top button ends */
+
+/* SUBSCRIPTION FORM STARS */
+.sub {
+  margin-top: 2rem;
+}
+.sub h3 {
+  text-align: center;
+}
+form {
+  text-align: center;
+  margin: 0.4rem 2rem;
+}
+.email-sub {
+  padding: 0.2rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+}
+.email-sub:focus {
+  /* focus = when typing in the input = change border color to secondary */
+  border: 1px solid var(--secondary-color);
+  outline: none;
+}
+.submit-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.3rem;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.sumbit-btn:hover {
+  background-color: #095cf7;
+}
+/* SUBSCRIPTION FORM ENDS */
+
+/* SOCIAL ICONS */
+.social {
+  text-align: center;
+  margin: 2rem;
+}
+.socicons {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+/* Footer */
+footer {
+  border-top: 1px solid #f1f1f1;
+  text-align: center;
+  padding: 2rem;
+}
+/* Media Query */
+@media screen and (max-width: 480px) {
+  .logo {
+    font-size: 1rem;
+  }
+  .hero {
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+  .hero {
+    flex-direction: column;
+    max-width: 500px;
+  }
+  h1 .hear,
+  h1 .connecting {
+    font-size: 2.5rem;
+  }
+  .scroll-up {
+    right: 2%;
+    bottom: 3%;
+  }
+  .btn {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
+  iframe {
+    max-width: 24rem;
+  }
+  .stand-1 {
+    left: 170px;
+  }
+  .stand-2 {
+    left: 225px;
+  }
+  .about {
+    text-align: center;
+  }
+  .persons {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  /* Hamburger menu */
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  nav ul {
+    flex-direction: column;
+    background-color: #fff;
+    align-items: center;
+    position: fixed;
+    left: 100%;
+    top: 5rem;
+    width: 100%;
+    text-align: center;
+  }
+  ul.active {
+    left: 0;
+  }
+  .nav-item {
+    margin: 2rem 0;
+  }
+  .bar {
+    margin-top: 5px;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}
